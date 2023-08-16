@@ -1,0 +1,55 @@
+<!-- Button trigger modal -->
+<html>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <title>
+      Okay
+    </title>
+  </head>
+  <body>
+    
+<button type="button" class="btn btn-primary" onclick="openModal()">
+    Add a new Event
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal" id="exampleModalCentered" >
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenteredLabel">Add new event</h5>
+          <button type="button" class="close" onclick="closeModal()">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <span style="color: red;">* </span><label for="formGroupExampleInput">Event title</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Event title">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Description</label>
+              <textarea class="form-control" id="formGroupExampleInput2" placeholder="Description" style="height: 130px;"></textarea>
+            </div>
+            <div class="form-group">
+              <span style="color: red;">* </span><label for="formGroupExampleInput">Start Date</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Start Date">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">End Date</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="End Date">
+            </div>
+          </form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModal()">Close</button>
+          <button type="button" class="btn btn-primary" onclick="saveData()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="extrajs.js"></script>
+</body>
+  </html>

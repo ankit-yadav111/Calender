@@ -1,0 +1,124 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>
+      Mera Calender
+    </title>
+  </head>
+  <body class="bg-secondary">
+    <div class="d-flex justify-content-center bg-white mx-4 my-4 round-cont">
+      <h1 class="my-2 font-weight-bold">Calender</h1>
+    </div>
+    <div class="bg-white mx-4 my-4 round-cont">
+        <div class="main-cont">
+            <div class="but" role="group">
+              <button type="button" class="bt btn-dark" id="prev-btn"><</button>
+              <button type="button" class="bt btn-dark" id="next-btn">></button>
+              <button type="button" id="today-btn" class=" bt btn-dark">Today</button>
+            <h3 id="month">August 2023</h3></div>
+            <div class="content">
+              <div class="weekdays ">
+                <div class="day ">Sun</div>
+                <div class="day ">Mon</div>
+                <div class="day ">Tue</div>
+                <div class="day ">Wed</div>
+                <div class="day" >Thu</div>
+                <div class="day ">Fri</div>
+                <div class="day ">Sat</div>
+              </div>
+              <div class="days text-info font-weight-normal" id="days">
+                <!-- lets add days using js -->
+              </div>
+              <div class="footer">.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+  <div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalHeading">Add New Event</h5>
+          <h6 class="modal-title" id="modalDate" style="margin-left: 10px;">Add New Event</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <span style="color: red;">* </span><label for="formGroupExampleInput">Event title</label>
+              <input type="text" class="form-control" id="eventTitle" placeholder="Event title">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Description</label>
+              <textarea class="form-control" id="description" placeholder="Description" style="height: 130px;"></textarea>
+            </div>
+            <div class="form-group">
+              <span style="color: red;">* </span><label for="formGroupExampleInput">Start Time</label>
+              <input type="text" class="form-control" id="startTime" placeholder="Start Time">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">End Time</label>
+              <input type="text" class="form-control" id="endTime" placeholder="End Time">
+            </div>
+          </form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModal()">Close</button>
+          <button type="button" class="btn btn-primary" onclick="saveData()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <!-- Second Modal -->
+  <div class="modal" id="showData" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalHeading">Add New Event</h5>
+          <h6 class="modal-title" id="modalDate" style="margin-left: 10px;">Add New Event</h6>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <span style="color: red;">* </span><label for="formGroupExampleInput">Event title</label>
+              <input type="text" class="form-control" id="eventTitle" placeholder="Event title">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput2">Description</label>
+              <textarea class="form-control" id="description" placeholder="Description" style="height: 130px;"></textarea>
+            </div>
+            <div class="form-group">
+              <span style="color: red;">* </span><label for="formGroupExampleInput">Start Time</label>
+              <input type="text" class="form-control" id="startTime" placeholder="Start Time">
+            </div>
+            <div class="form-group">
+              <label for="formGroupExampleInput">End Time</label>
+              <input type="text" class="form-control" id="endTime" placeholder="End Time">
+            </div>
+          </form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick="closeModal()">Close</button>
+          <button type="button" class="btn btn-primary" onclick="saveData()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Script tag -->
+    <script src="script.js"></script>
+  </body>
+</html>
